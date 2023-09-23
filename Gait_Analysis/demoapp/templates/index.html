@@ -1,0 +1,47 @@
+{%extends 'share.html'%}
+
+<!-- <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        demo
+    </title>
+</head>
+<body>
+    <img src="{% static 'img/audio_classifier.png' %}" alt="">
+    <img src="/static/img/audio_classifier.png" alt="">
+接收數據<br/>
+{{ text }}
+<ul>
+    {%for datalist in text2%}
+    <li>{{datalist.title}}</li>
+    {%empty%}
+    <li>數據缺失</li>
+    {%endfor%}
+</ul>
+</body>
+</html> -->
+
+
+{% load static %}
+
+
+{%block sharepage%}
+demo
+{%endblock%}
+
+{%block content%}
+<img src="{% static 'img/audio_classifier.png' %}" alt="">
+
+接收數據<br/>
+{{ text }}
+<ul>
+    {%for datalist in text2%}
+    <li>{{datalist.title}}</li>
+    {%empty%}
+    <li>數據缺失</li>
+    {%endfor%}
+</ul>
+{%endblock%}
