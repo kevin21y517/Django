@@ -53,7 +53,5 @@ def home(request):
 def login(request):
     return render(request,'login.html')
 
-@login_required
-def home_view(request):
-    # 這個視圖只有在使用者已登入時才可訪問
-    return render(request, "home.html")
+def eye(request):
+    return render(request,'eye.html')
